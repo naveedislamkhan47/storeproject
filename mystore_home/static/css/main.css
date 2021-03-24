@@ -1,0 +1,230 @@
+/* ----------------------------------------   Main Top Nav    --------------------------------- */
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.topnav a {
+  color: black;
+  text-decoration: none !important;
+}
+
+
+.topnav > a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.main-logo {
+  margin: auto;
+  padding: 0px 12px;
+  font-size: 50px;
+  font-family: "Abril Fatface", Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/*--- to add items to the right side of navbar ---*/
+.nav_right_side{
+  position: absolute;
+  overflow: visible;
+  right: 0%;
+  top: 0;
+  height: 100%;
+  max-width: 30%;
+  margin-right: 5%;
+}
+
+.nav_items_container{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+}
+
+.nav_items_container .item{
+  margin: 0px 5px;
+  padding: 0px 10px;
+  height:100%;
+  vertical-align: 50%;
+}
+
+.nav_items_container #cart_count{
+  font-weight: bold;
+  margin: 0;
+  padding: 0px;
+  margin-left: -15px;
+  vertical-align: 50%;
+}
+/*--- (END)to add items to the right side of navbar ---*/
+
+/* ------------------------------------   (END) Main LOGO Top Nave    -------------------------------- */
+
+
+/* ------------------------------------   Second Top Nave For Product's Category  ----------------------------- */
+
+.second_topnav {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background: rgb(240, 239, 239);
+}
+
+.second_topnav a {
+  border-radius: 5px;
+  margin: auto;
+  padding: 0px 12px;
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+  text-decoration: none !important;
+}
+
+.second_topnav a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+/* -----------------------------------   (END) Second Top Nave For Products    --------------------------- */
+
+/* ----------------------------------------------  Gender Choice  ----------------------------------------- */
+.collection{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid black 1px;
+}
+
+.collection-item{
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  width: 49%;
+  margin: 3px;
+  min-width: 300px;
+}
+
+.collection-item img{
+  width: 100%;
+}
+
+.collection-item h1{
+  font-size:3vw;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* change background colour to black and text color to white on hover */
+.collection-item:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+.collection-item:hover h1{
+  color: white;
+}
+/* (end) change background colour to black and text color to white on hover */
+
+/* --------------------------------------------- (END) Gender Choice  --------------------------------------- */
+
+/* --------------------------------------------- Product Categories  --------------------------------------- */
+.product_category-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  width: 100%;
+  border: solid black 1px;
+}
+
+.product_category-container > .category{
+  border: solid black 1px;
+  display: flex;
+  max-height: 80vh;
+  /* align-items: stretch; */
+  /* background-color: aliceblue; */
+}
+
+.category_text-container{
+  border: solid black 1px;
+  width: 20%;
+  background-color: rgb(174, 180, 185);
+}
+
+.category_image-container{
+  border: solid black 1px;
+  width: 80%;
+  background-color: rgb(54, 79, 100);
+  overflow: hidden;
+}
+
+.category_text-container > h1{
+  text-align: center;
+}
+.category_image-container > img{
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+
+
+/* --------------------------------------------- (END) Product Categories  --------------------------------------- */
+
+/* -------------------------------------------------   FOOTER   --------------------------------------------- */
+
+footer{
+  border:solid black 2px;
+  background-color: rgb(235, 235, 235);
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.footer_container{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: rgb(206, 206, 206); */
+  padding: 5px;
+  justify-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  /* border: solid black 1px; */
+}
+
+.footer_container > div{
+  min-width: 48%;
+  margin: 10px;
+  /* border: solid black 2px; */
+  border-radius: 5px;
+  /* background-color: rgb(82, 85, 112); */
+}
+
+.footer_social-media-link{
+  margin: 0px 3px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: solid black 1px;
+  overflow: hidden;
+}
+.footer_social-media-link:hover .svg_icon{
+  stroke: white;
+  stroke-width: 2;
+  background-color: black;
+}
+.footer_social-media-link:hover{
+  cursor: pointer;
+}
+
+/* -------------------------------------------------  (END) FOOTER   ------------------------------------------- */

@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = 'en'>
+
+<head>
+    <meta name="viewport" content="width=device-width" initial-scale='1.0'>
+    <!-- ------------------------------------------   CSS   --------------------------------------------- -->
+    <!-- MY CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <!-- ----------------------------------------   CSS END   ------------------------------------------- -->
+
+    <!-- -----------------------------------------   FONTS  --------------------------------------------- -->
+    <!-- link for Abril Fatface Fonts for First Top Nav Logo-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- link for Work Sans Fonts for Second Top Nav-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <!-- ----------------------------------------   FONTS END   ------------------------------------------ -->
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <!-- ----------------------- 1st Three Navbars (on every page thats why in layout)------------------------->
+    <!-- 1|Cart and login Nav -->
+    <div class="topnav" style="height: 22px;margin-top: 1px;">
+        <div class="nav_right_side">
+            <div class="nav_items_container">
+                <a title="login" href="#"><img class=item src="{% static 'images/login-icon.png' %}" ></a>
+                <a title="shopping bag" href="#"><img class=item src="{% static 'images/bag-icon.png' %}" ><span id="cart_count">0</span></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 2|Main Logo Navbar -->
+    <div class="topnav">
+        <a class="main-logo" href="{% url 'mystore_home:home' %}">rebrand</a>
+    </div>
+    
+    <!-- 3|Category Navbar -->
+    <div class="second_topnav">
+        <a href="#">MEN</a>
+        <a href="#">WOMEN</a>
+    </div>
+        <!-- ----------------------- (END)1st Three Navbars ------------------------->
+    {% block body %}
+    {% endblock %}
+</body>
+
+<footer>
+  <div class="footer_container">
+      <div>
+        <h3>Rebrand</h3>
+        © 2020, Rebrand is a Registered Trademark Of Sizonas.
+      </div>
+      <div>
+        <h3>Shipping & Returns</h3>
+        All orders over $100 are shipped free.<br> If for any reason, you are unsatisfied with your purchase,<br>
+        you may return it in its original condition within 30 days for a full refund.
+      </div>
+  </div>
+
+  <div class="footer_container">
+      <a class=footer_social-media-link>
+        <svg class='svg_icon' fill="#000000" viewBox="-3 -3 55 55" width="100%" height="100%">
+            <path d="M 30.140625 2 C 26.870375 2 24.045399 2.9969388 22.0625 4.9667969 C 20.079601 6.936655 19 9.823825 19
+             13.367188 L 19 18 L 13 18 A 1.0001 1.0001 0 0 0 12 19 L 12 27 A 1.0001 1.0001 0 0 0 13 28 L 19 28 L 19 47 A 
+             1.0001 1.0001 0 0 0 20 48 L 28 48 A 1.0001 1.0001 0 0 0 29 47 L 29 28 L 36 28 A 1.0001 1.0001 0 0 0 36.992188 
+             27.125 L 37.992188 19.125 A 1.0001 1.0001 0 0 0 37 18 L 29 18 L 29 14 C 29 12.883334 29.883334 12 31 12 L 37 12 
+             A 1.0001 1.0001 0 0 0 38 11 L 38 3.3457031 A 1.0001 1.0001 0 0 0 37.130859 2.3554688 C 36.247185 2.2382213 
+             33.057174 2 30.140625 2 z M 30.140625 4 C 32.578477 4 34.935105 4.195047 36 4.2949219 L 36 10 L 31 10 C 28.802666 
+             10 27 11.802666 27 14 L 27 19 A 1.0001 1.0001 0 0 0 28 20 L 35.867188 20 L 35.117188 26 L 28 26 A 1.0001 1.0001
+             0 0 0 27 27 L 27 46 L 21 46 L 21 27 A 1.0001 1.0001 0 0 0 20 26 L 14 26 L 14 20 L 20 20 A 1.0001 1.0001 0 0 0 21 19 
+             L 21 13.367188 C 21 10.22255 21.920305 7.9269075 23.472656 6.3847656 C 25.025007 4.8426237 27.269875 4 30.140625 4 z"/>
+        </svg>
+      </a>
+      <a class=footer_social-media-link>
+        <svg class='svg_icon'fill="#000000" viewBox="-3 -3 55 55" width="100%" height="100%">
+          <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516
+           47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161
+           45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161
+           9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14
+           C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712
+           31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 
+           29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/>
+        </svg>
+      </a>
+      <!-- <a class=footer_social-media-link></a> -->
+    </div>
+</footer>
+
+<!-- ---------------------------------------  BOOTSTRAP JS  ----------------------------------------- -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/main.js' %}"></script>
+<!-- ---------------------------------------  BOOTSTRAP JS  ----------------------------------------- -->
+</html>
